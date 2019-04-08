@@ -8,6 +8,8 @@
 """
 Data feed pipline
 """
+import sys
+sys.path.append('/home/ph/workspace/attentive-gan-derainnet/')
 import argparse
 import os
 import os.path as ops

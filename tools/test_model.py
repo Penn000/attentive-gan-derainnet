@@ -8,6 +8,8 @@
 """
 test model
 """
+import sys
+sys.path.append('/home/ph/workspace/attentive-gan-derainnet/')
 import os.path as ops
 import argparse
 

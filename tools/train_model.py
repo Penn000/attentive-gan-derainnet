@@ -8,6 +8,8 @@
 """
 模型训练脚本
 """
+import sys
+sys.path.append('/home/ph/workspace/attentive-gan-derainnet/')
 import os
 import os.path as ops
 import argparse
@@ -281,7 +283,7 @@ def train_model(dataset_dir, weights_path=None):
                     continue
 
             # train loop
-            for epoch in range(train_epochs):
+            for epoch in range(1, train_epochs+1):
                 # training part
                 t_start = time.time()
 
@@ -313,7 +315,7 @@ def train_model(dataset_dir, weights_path=None):
                     )
 
                 # Save Model
-                if epoch % 5000 == 0:
+                if epoch % CFG.TRAIN.MODEL_SAVE_STEP == 0:
                     saver.save(sess=sess, save_path=model_save_path, global_step=epoch)
 
         sess.close()

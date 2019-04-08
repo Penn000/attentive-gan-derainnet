@@ -18,8 +18,10 @@ cfg = __C
 # Train options
 __C.TRAIN = edict()
 
-# Set the shadownet training epochs
-__C.TRAIN.EPOCHS = 100010
+# Set the derain-net training epochs
+__C.TRAIN.EPOCHS = 1000
+# Set the model save step druing training epochs
+__C.TRAIN.MODEL_SAVE_STEP = 1000
 # Set the initial learning rate
 __C.TRAIN.LEARNING_RATE = 0.0002
 # Set the GPU resource used during training process
